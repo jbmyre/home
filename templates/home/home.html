@@ -16,6 +16,12 @@
                 padding: 0;
                 white-space: nowrap;
             }
+
+            .light-dropshadow{
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=162, Color=#E0E0E0)";/*IE 8*/
+                text-shadow: 3px 1px 5px #E0E0E0;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+                filter: progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color=#E0E0E0); /*IE 5.5-7*/
+            }
         </style>
 
     </head>
@@ -130,13 +136,13 @@
             <div class="row">
 
               <div class="col l4 s6">
-                <h5 class="light-blue-text text-darken-4">AFTERSCHOOL HOURS</h5>
+                <h5 class="light-blue-text text-darken-4 light-dropshadow">AFTERSCHOOL HOURS</h5>
                 <p class="grey-text text-lighten-4">Monday-Friday.</p>
                 <p class="grey-text text-lighten-4">2:45pm-6:00pm</p>
               </div>
 
               <div class="col l4  s6">
-                <h5 class="light-blue-text text-darken-4">MAILING ADDRESS</h5>
+                <h5 class="light-blue-text text-darken-4 light-dropshadow">MAILING ADDRESS</h5>
                 <ul>
                   <li><p class="grey-text text-lighten-3" >Big Apple Youth Sports</p></li>
                   <li><p class="grey-text text-lighten-3" > 459 Columbus Ave Suite 188 NYC NY 10024</p></li>
