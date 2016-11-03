@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="/static/home/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .no-marg {
+                margin:0;
+            }
+
+            {% block style %}{% endblock %}
+
+        </style>
+
+    </head>
+
+    <body id="body" class="grey lighten-2">
+
+      <nav>
+          <div class="nav-wrapper">
+          <a href="#" class="brand-logo">BIG APPLE YOUTH SPORTS</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li ><a href="index.html">Home</a></li>
+                <li ><a class="active" href="#test2">PS6</a></li>
+                <li ><a href="ycs.html">YCS</a></li>
+                <li ><a href="#test4">Sports Leagues</a></li>
+                <li ><a href="#test4">Forms and Schedules</a></li>
+                <li ><a href="#test4">Bring BA to Your School</a></li>
+                <li ><a href="#test4">Register</a></li>
+          </ul>
+
+           <ul class="side-nav" id="mobile-demo">
+                 <li ><a href="#test1">Home</a></li>
+                <li ><a class="active" href="#test2">PS6 Afterschool Program</a></li>
+                <li ><a href="#test3">YCS Afterschool Program</a></li>
+                <li ><a href="#test4">Sports Leagues</a></li>
+                <li ><a href="#test4">Forms and Schedules</a></li>
+                <li ><a href="#test4">Bring BA to Your School</a></li>
+                <li ><a href="#test4">Register</a></li>
+           </ul>
+        </div>
+      </nav>
+
+      <br>
+
+      <div class="container">
+          {% block content %}{% endblock %}
+      </div>
+
+      <br>
+      <footer class="page-footer blue">
+          <div class="container">
+            <div class="row">
+
+              <div class="col l4 s6">
+                <h5 class="light-blue-text">AFTERSCHOOL HOURS</h5>
+                <p class="grey-text text-lighten-4">Monday-Friday.</p>
+                <p class="grey-text text-lighten-4">2:45pm-6:00pm</p>
+              </div>
+
+              <div class="col l4  s6">
+                <h5 class="light-blue-text ">MAILING ADDRESS</h5>
+                <ul>
+                  <li><p class="grey-text text-lighten-3" >Big Apple Youth Sports</p></li>
+                  <li><p class="grey-text text-lighten-3" > 459 Columbus Ave Suite 188 NYC NY 10024</p></li>
+                  <li><a href="mailto:coach@bigappleyouthsports.org" class="grey-text text-lighten-3" >coach@bigappleyouthsports.org</a></li>
+                  <li><p class="grey-text text-lighten-3" >Tel: 212-987-9865</p></li>
+                </ul>
+              </div>
+
+              <div class="col l4 m12 s12 center">
+               <iframe
+                  width="300"
+                  height="200"
+                  frameborder="0" style="border:0"
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCczi15vN55d9ycqI7mlAhUoUJq7ibrydE
+                    &q=459+Columbus+Ave+#188,New+York,NY+10024" allowfullscreen>
+                </iframe>
+              </div>
+
+            </div>
+          </div>
+      </footer>
+
+
+    <script type="text/javascript" src="/static/home/js/vendor/jquery.min.js"></script>
+    <script src="/static/home/js/main.js"></script>
+
+    <script>
+         $(document).ready(function() {
+            $('select').material_select();
+            $(".button-collapse").sideNav();
+            $('ul.tabs').tabs();
+            $('.slider').slider({full_width: true,indicators: true});
+
+         });
+    </script>
+  </body>
+</html>
