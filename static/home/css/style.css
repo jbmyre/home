@@ -639,11 +639,11 @@
 }
 
 .blue {
-  background-color: #0D8DCC !important;
+  background-color: #1F2D60 !important;
 }
 
 .blue-text {
-  color: #0D8DCC !important;
+  color: #1F2D60 !important;
 }
 
 .blue.lighten-5 {
@@ -2031,11 +2031,11 @@
 }
 
 .grey {
-  background-color: #9e9e9e !important;
+  background-color: #63636A !important;
 }
 
 .grey-text {
-  color: #9e9e9e !important;
+  color: #63636A !important;
 }
 
 .grey.lighten-5 {
@@ -2063,11 +2063,11 @@
 }
 
 .grey.lighten-2 {
-  background-color: #e0e0e0 !important;
+  background-color: #939599 !important;
 }
 
 .grey-text.text-lighten-2 {
-  color: #e0e0e0 !important;
+  color: #939599 !important;
 }
 
 .grey.lighten-1 {
@@ -2103,11 +2103,11 @@
 }
 
 .grey.darken-4 {
-  background-color: #212121 !important;
+  background-color: #212129 !important;
 }
 
 .grey-text.text-darken-4 {
-  color: #212121 !important;
+  color: #212129 !important;
 }
 
 .black {
@@ -2689,13 +2689,13 @@ a {
 .divider {
   height: 1px;
   overflow: hidden;
-  background-color: #e0e0e0;
+  background-color: #939599;
 }
 
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #0D8DCC;
+  border-left: 5px solid #1F2D60;
 }
 
 i {
@@ -2755,7 +2755,7 @@ video.responsive-video {
 }
 
 .pagination li.active {
-  background-color: #0D8DCC;
+  background-color: #1F2D60;
 }
 
 .pagination li.disabled a {
@@ -2940,7 +2940,7 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #0D8DCC;
+  background-color: #1F2D60;
 }
 
 footer.page-footer .footer-copyright {
@@ -4022,7 +4022,7 @@ input[type=range] + .thumb {
 
 nav {
   color: #fff;
-  background-color: #0D8DCC;
+  background-color: #1F2D60;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -4759,7 +4759,7 @@ small {
 }
 
 .tabs .tab a {
-  color: #0D8DCC;
+  color: #1F2D60;
   display: block;
   width: 100%;
   height: 100%;
@@ -4769,11 +4769,11 @@ small {
 }
 
 .tabs .tab a:hover {
-  color: #4bbcf4;
+  color: #3851ad;
 }
 
 .tabs .tab.disabled a {
-  color: #4bbcf4;
+  color: #3851ad;
   cursor: default;
 }
 
@@ -4781,7 +4781,7 @@ small {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #33b3f2;
+  background-color: #32489a;
   will-change: left, right;
 }
 
@@ -5520,28 +5520,28 @@ button:focus {
 
 label {
   font-size: 0.8rem;
-  color: #9e9e9e;
+  color: #63636A;
 }
 
 /* Text Inputs + Textarea
    ========================================================================== */
 /* Style Placeholders */
 ::-webkit-input-placeholder {
-  color: #d1d1d1;
+  color: #96969d;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #d1d1d1;
+  color: #96969d;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #d1d1d1;
+  color: #96969d;
 }
 
 :-ms-input-placeholder {
-  color: #d1d1d1;
+  color: #96969d;
 }
 
 /* Text inputs */
@@ -5560,7 +5560,7 @@ input[type=search],
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #63636A;
   border-radius: 0;
   outline: none;
   height: 3rem;
@@ -5837,7 +5837,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label {
-  color: #9e9e9e;
+  color: #63636A;
   position: absolute;
   top: 0.8rem;
   font-size: 1rem;
@@ -6399,7 +6399,7 @@ select {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #63636A;
   outline: none;
   height: 3rem;
   line-height: 3rem;
@@ -6902,7 +6902,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav .collapsible-body li.active,
 .side-nav.fixed .collapsible-body li.active {
-  background-color: #0D8DCC;
+  background-color: #1F2D60;
 }
 
 .side-nav .collapsible-body li.active a,
@@ -7446,7 +7446,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .slider .slides {
-  background-color: #9e9e9e;
+  background-color: #63636A;
   margin: 0;
   height: 400px;
 }
@@ -7479,7 +7479,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .slider .slides li .caption p {
-  color: #e0e0e0;
+  color: #939599;
 }
 
 .slider .slides li.active {
@@ -7502,7 +7502,7 @@ input[type=range]:focus::-ms-fill-upper {
   height: 16px;
   width: 16px;
   margin: 0 12px;
-  background-color: #e0e0e0;
+  background-color: #939599;
   transition: background-color .3s;
   border-radius: 50%;
 }
