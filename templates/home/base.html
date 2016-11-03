@@ -8,7 +8,11 @@
             .no-marg {
                 margin:0;
             }
-
+            body#body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
             {% block style %}{% endblock %}
 
         </style>
