@@ -4069,7 +4069,7 @@ nav .brand-logo {
   position: absolute;
   color: #fff;
   display: inline-block;
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   padding: 0;
   white-space: nowrap;
 }
@@ -7508,7 +7508,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .slider .indicators .indicator-item.active {
-  background-color: #4CAF50;
+  background-color: #03a9f4;
 }
 
 .carousel {
