@@ -1,0 +1,4 @@
+requirements
+
+Pillow
+django-ckeditor
