@@ -6,3 +6,7 @@ import json
 
 def home(request):
     return render(request, 'home/home.html')
+
+
+def register(request):
+    return render(request, 'home/register.html')
