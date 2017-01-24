@@ -22,5 +22,9 @@ app_name = 'home'
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^register/$', views.register, name='register'),
+    url(r'^birthdays/$', views.birthdays, name='birthdays'),
+    url(r'^ps6/$', views.ps6, name='ps6'),
+    url(r'^spring/$', views.spring, name='spring'),
+    url(r'^ycs/$', views.ycs, name='ycs'),
     #url(r'^send_command/(?P<box>[\w\-]+)/(?P<code>[\w\-]+)/$', views.send_command, name='send_commmand'),
 ]

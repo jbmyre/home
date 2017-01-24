@@ -10,3 +10,19 @@ def home(request):
 
 def register(request):
     return render(request, 'home/register.html')
+
+
+def birthdays(request):
+    return render(request, 'home/birthdays.html')
+
+
+def ycs(request):
+    return render(request, 'home/ycs.html')
+
+
+def ps6(request):
+    return render(request, 'home/ps6.html')
+
+
+def spring(request):
+    return render(request, 'home/spring.html')
