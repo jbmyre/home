@@ -23,6 +23,19 @@ class Page(models.Model):
         return self.name
 
 
+class Slider(models.Model):
+    image = models.ImageField(upload_to='uploads/slider')
+
+    page = models.ForeignKey(
+        Page,
+        on_delete=models.CASCADE,
+        related_name="slider"
+    )
+
+    def __str__(self):  # __unicode__ on Python 2
+        return self.page
+
+
 class Post(models.Model):
     title = models.CharField(max_length=128)
     page = models.ForeignKey(
