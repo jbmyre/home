@@ -6,44 +6,27 @@ from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 
-class Photo(models.Model):
-    image = models.ImageField(upload_to='uploads/')
+class Post(models.Model):
+    title = models.CharField(max_length=128)
+    content = RichTextUploadingField(null=True)
+
+    def __str__(self):  # __unicode__ on Python 2
+        return self.title
 
 
 class Page(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100)
-    photo = models.ForeignKey(
-        Photo,
-        on_delete=models.CASCADE,
-        related_name="photo"
-    )
+    posts = models.ManyToManyField(Post)
 
     def __str__(self):  # __unicode__ on Python 2
         return self.name
 
 
-class Slider(models.Model):
-    image = models.ImageField(upload_to='uploads/slider')
-
-    page = models.ForeignKey(
-        Page,
-        on_delete=models.CASCADE,
-        related_name="slider"
-    )
-
-    def __str__(self):  # __unicode__ on Python 2
-        return self.page
-
-
-class Post(models.Model):
-    title = models.CharField(max_length=128)
-    page = models.ForeignKey(
-        Page,
-        on_delete=models.CASCADE,
-        related_name="post"
-    )
-    content = RichTextUploadingField(null=True)
+class Photo(models.Model):
+    title = models.CharField(max_length=100)
+    page = models.ForeignKey(Page)
+    image = models.ImageField(upload_to='static/home/uploads/', blank=True, null=True)
 
     def __str__(self):  # __unicode__ on Python 2
         return self.title
