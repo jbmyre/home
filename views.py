@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import json
 # Create your views here.
-from .models import Page, Post, Photo
+from .models import Page, Post, Photo, Slider
 
 
 def home(request):
@@ -14,19 +14,32 @@ def register(request):
 
 
 def birthdays(request):
-    return render(request, 'home/birthdays.html')
+    post = Post.objects.filter(page__name='birthdays').all()
+    pic = Photo.objects.filter(page__name='birthday').all()
+    slider = Slider.objects.filter(page__name='birthday').all()
+    posts = dict(posts=post, pics=pic, slider=slider)
+    return render(request, 'home/birthdays.html', posts)
 
 
 def ycs(request):
     post = Post.objects.filter(page__name='YCS').all()
     pic = Photo.objects.filter(page__name='YCS').all()
-    posts = dict(posts=post, pics=pic)
+    slider = Slider.objects.filter(page__name='YCS').all()
+    posts = dict(posts=post, pics=pic, slider=slider)
     return render(request, 'home/ycs.html', posts)
 
 
 def ps6(request):
-    return render(request, 'home/ps6.html')
+    post = Post.objects.filter(page__name='ps6').all()
+    pic = Photo.objects.filter(page__name='ps6').all()
+    slider = Slider.objects.filter(page__name='ps6').all()
+    posts = dict(posts=post, pics=pic, slider=slider)
+    return render(request, 'home/ps6.html', posts)
 
 
 def spring(request):
+    post = Post.objects.filter(page__name='spring').all()
+    pic = Photo.objects.filter(page__name='spring').all()
+    slider = Slider.objects.filter(page__name='spring').all()
+    posts = dict(posts=post, pics=pic, slider=slider)
     return render(request, 'home/spring.html')

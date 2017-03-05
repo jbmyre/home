@@ -3,7 +3,49 @@
 
        <div class="card-panel blue hoverable">
 
-           <div class="row"></div>
+                <h1 class="center-align white-text">Sports Leagues</h1>
+
+     <div class="row">
+             <div class="col s12">
+              <div class="container">
+                <br>
+                <div class="slider">
+                    <ul class="slides">
+                      {% for slide in slider.image %}
+                      <li>
+                        <img src="/uploads/slider/{{ slide.image }}"> <!-- random image -->
+                        <div class="caption center-align">
+                          <h3></h3>
+                          <h5 class="light grey-text text-lighten-3"></h5>
+                        </div>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+              </div>
+
+                 <div class="row">
+                     <div class="col s12 m4 l4">
+                      {% for p in pics %}
+                          <img class="responsive-img" src="/attachments/{{ p.image }}">
+                          <br>
+                      {% endfor %}
+                     </div>
+                     <div class="col s12 m8 l8">
+                     {% for p in posts %}
+                        <div class="card-panel">
+
+                        <div class="row"> <h5>{{ p.title|safe }}</h5> </div>
+                        <div>{{ p.content|safe }}</div>
+                        </div>
+                     {% endfor %}
+                    </div>
+                 </div>
+
+             </div>
+            </div>
+            <br>
+     </div>
 
     </div>
 
