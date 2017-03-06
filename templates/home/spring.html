@@ -11,13 +11,15 @@
                 <br>
                 <div class="slider">
                     <ul class="slides">
-                      {% for slide in slider%}
+                      {% for slide in slider %}
                       <li>
-                        <img src="/attachments/{{ slide.image }}">
-                        <div class="caption center-align">
+                        <img src="/attachments/{{ slide.image }}"> <!-- random image -->
+                      {% if slide.caption %}
+                        <div class="caption {{ slide.caption_align }}">
                           <h3></h3>
-                          <h5 class="light grey-text text-lighten-3"></h5>
+                          <h5 class="light grey-text text-lighten-3">{{ slide.caption }}</h5>
                         </div>
+                      {% endif %}
                       </li>
                       {% endfor %}
                     </ul>
