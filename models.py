@@ -35,8 +35,25 @@ class Slider(models.Model):
 
 
 class SliderImage(models.Model):
+    left = "left-align"
+    right = "right-align"
+    center = "center-align"
+
+    CHOICES = (
+        (left, "Left Aligned"),
+        (right,  "Right Aligned"),
+        (center, "Center Aligned")
+    )
+
     title = models.CharField(max_length=100, blank=True, null=True)
     image = models.ImageField(upload_to='static/home/uploads/', blank=True, null=True)
+    caption = models.CharField(max_length=100, blank=True, null=True)
+    caption_align = models.CharField(
+        max_length=50,
+        choices=CHOICES,
+        default=''
+    )
+
     slider = models.ForeignKey(Slider,
         on_delete=models.CASCADE,
     )
