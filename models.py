@@ -22,17 +22,6 @@ class Page(models.Model):
     def __str__(self):  # __unicode__ on Python 2
         return self.name
 
-class Slider(models.Model):
-    name = models.CharField(max_length=100)
-    photos = models.ManyToManyField(
-        Page,
-        through='SliderImage',
-        through_fields=('slider', 'page'),
-    )
-
-    def __str__(self):  # __unicode__ on Python 2
-        return self.name
-
 
 class SliderImage(models.Model):
     left = "left-align"
@@ -54,9 +43,10 @@ class SliderImage(models.Model):
         default=''
     )
 
-    slider = models.ForeignKey(Slider,
-        on_delete=models.CASCADE,
-    )
+    # slider = models.ForeignKey(Slider,
+    #
+    #     on_delete=models.CASCADE,
+    # )
 
     page = models.ForeignKey(Page,
         on_delete=models.CASCADE,
@@ -74,4 +64,12 @@ class Photo(models.Model):
     def __str__(self):  # __unicode__ on Python 2
         return self.title
 
+
+class Video(models.Model):
+    title = models.CharField(max_length=100)
+    page = models.ForeignKey(Page)
+    url = models.URLField()
+
+    def __str__(self):  # __unicode__ on Python 2
+        return self.title
 
